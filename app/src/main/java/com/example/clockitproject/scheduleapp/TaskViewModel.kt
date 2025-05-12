@@ -2,6 +2,7 @@ package com.example.clockitproject.scheduleapp
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
+import java.time.LocalDate
 
 /**
  * ViewModel that holds a list of Tasks and survives configuration changes.
@@ -14,8 +15,8 @@ class TaskViewModel : ViewModel() {
         // sample items for preview / initial state
         _tasks.addAll(
             listOf(
-                Task("CSC 430", "College of Staten Island, Room 1N 118", "9:05", "12:05"),
-                Task("CSC 330", "College of Staten Island, Room 1N 118", "2:05", "3:15")
+                Task("CSC 430", "College of Staten Island, Room 1N 118", "9:05", "12:05", LocalDate.now()), //LocalDate.now()
+                Task("CSC 330", "College of Staten Island, Room 1N 118", "2:05", "3:15", LocalDate.now()) //LocalDate.now()
             )
         )
     }
